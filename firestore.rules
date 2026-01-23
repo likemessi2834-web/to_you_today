@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // NOTE: Merge this block into your existing rules before deploying.
+    match /users/{uid}/savedPosts/{postId} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}

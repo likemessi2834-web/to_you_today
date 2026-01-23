@@ -1,0 +1,83 @@
+name: to_you_today
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # [UI 관련]
+  cupertino_icons: ^1.0.8
+  flutter_staggered_grid_view: ^0.7.0
+
+  # [이미지 로딩]
+  cached_network_image: ^3.3.0
+  transparent_image: ^2.0.1
+
+  # [기능: 앨범, 캡처, 저장, 공유]
+  image_picker: ^1.0.7
+  screenshot: ^3.0.0
+  path_provider: ^2.1.2
+  share_plus: ^10.0.0
+  google_fonts: ^7.0.0
+  shimmer: ^3.0.0
+  image: ^4.3.0
+  flutter_cache_manager: ^3.3.1
+  shared_preferences: ^2.2.3
+
+  saver_gallery: ^4.1.0
+
+  # [Firebase]
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+  firebase_storage: ^12.3.4
+  firebase_remote_config: ^5.1.3
+  firebase_crashlytics: ^4.1.3
+
+  # [Network]
+  http: ^1.2.0
+
+  # [Monetization - OFF by default]
+  google_mobile_ads: ^5.1.0
+  url_launcher: ^6.3.1
+  google_sign_in: ^7.2.0
+  
+  # [Notifications for Rewards]
+  flutter_local_notifications: ^17.2.3
+  timezone: ^0.9.4
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
+
+# 여기가 중요합니다! (설정은 파일 맨 아래에 딱 한 번만 있어야 합니다)
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/icon.png
+    - web/splash/img/
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png" # 아까 넣은 이미지 경로
+  min_sdk_android: 21 # 구형 안드로이드 호환성
+
+
+flutter_native_splash:
+  color: "#FFFFFF"             # 배경색 (흰색)
+  image: "assets/icon/icon.png" # 가운데 띄울 이미지 (아까 그 나비!)
+  
+  # 안드로이드 12버전 이상을 위한 추가 설정 (요즘 폰 필수)
+  android_12:
+    image: "assets/icon/icon.png"
+    icon_background_color: "#FFFFFF"
